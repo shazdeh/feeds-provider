@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony-project.org/2.0/container">
+    <parameters>
+        <parameter key="roksprocket.providers.registered.feed" type="collection">
+            <parameter key="name">feed</parameter>
+            <parameter key="displayname">RSS Feed</parameter>
+            <parameter key="path">%current.path%</parameter>
+            <parameter key="class">RokSprocket_Provider_Feed</parameter>
+            <parameter key="optionfile">options.xml</parameter>
+            <parameter key="service">roksprocket.provider.feed</parameter>
+            <parameter key="filter.processor">roksprocket.filter.processor.feed</parameter>
+            <parameter key="filter.file">filters.xml</parameter>
+        </parameter>
+    </parameters>
+    <services>
+        <service id="roksprocket.provider.feed" class="%roksprocket.providers.registered.feed.class%" shared="false"/>
+        <service id="roksprocket.filter.processor.feed" class="RokSprocket_Provider_Feed_Filter" shared="false"/>
+    </services>
+</container>

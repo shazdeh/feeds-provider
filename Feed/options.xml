@@ -1,0 +1,21 @@
+<config>
+	<fields name="params">
+		<fieldset name="roksprocket" overwrite="true">
+			<field name="feed_provider_title" type="label" label="Feed Settings" default="" description=""
+				   optionorder="11" class="provider provider_feed"/>
+			<field name="feed_source" type="text" label="Source"
+				   class="provider provider_feed" optionorder="14" description="">
+			</field>
+			<field name="feed_cache" type="textplus" append="hours" label="Cache Time"
+				   class="provider provider_feed" optionorder="15" description="" default="12">
+			</field>
+			<field name="feed_download_images" type="containerlist" default="0"
+					label="Download Images"
+					description="Create local copies of article images?" optionorder="16" class="provider provider_feed">
+				<option value="1">ENABLE</option>
+				<option value="0">DISABLE</option>
+			</field>
+
+		</fieldset>
+	</fields>
+</config>
